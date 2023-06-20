@@ -65,15 +65,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
-@use '..//styles/partials/variables' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/generals.scss' as *;
 
     header {
-        width: 100vw;
+        width: 100%;
         background-color: #fff;
         .container {
-            width: 80%;
             height: 100%;
-            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
