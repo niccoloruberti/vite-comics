@@ -51,17 +51,57 @@ export default {
 
 <template>
     <header>
-        <div class="logo">
-            <img src="../assets/img/dc-logo.png">
+        <div class="container">
+            <div class="logo">
+                <img src="../assets/img/dc-logo.png">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li v-for="(item, index) in menu" :key="index">{{ item.text }}</li>
+                </ul>
+            </nav>
         </div>
-        <nav class="menu">
-            <ul>
-                <li v-for="(item, index) in menu" :key="index">{{ item.text }}</li>
-            </ul>
-        </nav>
     </header>
 </template>
 
-<style>
-    
+<style scoped lang="scss">
+@use '..//styles/partials/variables' as *;
+
+    header {
+        width: 100vw;
+        background-color: #fff;
+        .container {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            nav {
+                width: 60%;
+                height: 100%;
+
+                ul {
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    list-style: none;
+
+                    li {
+                        height: 100%;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: bold;
+
+                            &:hover {
+                                color: $color-primary;
+                            }
+                    }
+                }
+            }
+        }
+    }
 </style>

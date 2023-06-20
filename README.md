@@ -4,3 +4,4 @@ Esercizio: Vite DC Comics
 - inserisco i contenuti all'interno dell'AppHeader;
 - inserisco i contenuti all'interno dell'AppMainContent;
 - inserisco i contenuti all'intenro dell'AppFooter;
+- aggiungo lo stile al contenuto dell'header;

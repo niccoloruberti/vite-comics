@@ -20,6 +20,6 @@ export default {
   </div>
 </template>
 
-<style scoped>
-  /* @use './styles/generals.scss' as *; */
+<style scoped lang="scss">
+  @use './styles/generals.scss' as *;
 </style>
