@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template >
-  <div>
+  <div class="main-container">
     <AppHeader></AppHeader>
     <AppMainContent />
     <AppFooter />

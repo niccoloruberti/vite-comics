@@ -5,9 +5,10 @@ export default {
 </script>
 
 <template>
+<div class="background">
     <footer>
         <!-- sezione comics, merchandise, subscription, shop locator, power visa -->
-        <div>
+        <div class="acquisti">
             <div>
                 <img src="../assets/img/buy-comics-digital-comics.png">
                 <span>digital comics</span>
@@ -29,12 +30,13 @@ export default {
                 <span>dc power visa</span>
             </div>
         </div>
+        <div class="container">
         <!-- sezione link utili -->
-        <div>
+        <div class="link-utili">
             <!-- dc comics -->
             <div>
                 <ul>
-                    dc comics
+                    <h3>dc comics</h3>
                     <li>Characters</li>
                     <li>Comics</li>
                     <li>Movies</li>
@@ -47,7 +49,7 @@ export default {
             <!-- shop -->
             <div>
                 <ul>
-                    shop
+                    <h3>shop</h3>
                     <li>Shop DC</li>
                     <li>Shop DC Collectibles</li>
                 </ul>
@@ -55,7 +57,7 @@ export default {
              <!-- dc -->
             <div>
                 <ul>
-                    dc
+                    <h3>dc</h3>
                     <li>Terms Of Use</li>
                     <li>Privacy policy (New)</li>
                     <li>Ad Chioces</li>
@@ -72,7 +74,7 @@ export default {
             <!-- sites -->
             <div>
                 <ul>
-                    sites
+                    <h3>sites</h3>
                     <li>DC</li>
                     <li>MAD Magazine</li>
                     <li>DC Kids</li>
@@ -81,8 +83,11 @@ export default {
                 </ul>
             </div>
         </div>
+        <!-- dc logo -->
+        <img src="../assets/img/dc-logo-bg.png">
+        </div>
         <!-- sezione collegamenti social -->
-        <div>
+        <div class="social">
             <!-- sign up -->
             <div>
                 <button>sign-up now!</button>
@@ -98,8 +103,125 @@ export default {
             </div>
         </div>
     </footer>
+</div>
 </template>
 
-<style>
-    
+<style scoped lang="scss">
+@use '../styles/partials/variables' as *;
+@use '../styles/generals.scss' as *;
+    .background {
+        background-image: url('../assets/img/footer-bg.jpg');
+        background-size: cover;
+        height: 100%;
+    }
+
+    footer {
+        width: 100vw;
+        height: 100%;
+        position: relative;
+
+        .acquisti {
+            display: flex;
+            margin: 0 auto;
+            padding: 50px 50px;
+            background-color: $color-primary;
+            align-items: center;
+            justify-content: space-around;
+
+            div {
+                display: flex;
+                align-items: center;
+                margin: 0 10px;
+
+                img {
+                    width: 40px;
+                }
+
+                span {
+                    color: white;
+                    text-transform: uppercase;
+                    margin-left: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .container {
+            display: flex;
+            position: relative;
+
+            .link-utili {
+            height: 30vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+                ul {
+                    color: white;
+                    list-style: none;
+                    margin: 10px 0;
+
+                    h3 {
+                        margin: 5px 0;
+                        text-transform: uppercase;
+                    }
+
+                    li {
+                        font-size: 12px;
+                        color: grey;
+                        margin: 3px 0;
+                    }
+                }
+
+                div {
+                    margin: 0 20px;
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 50px;
+                top: -30px;
+                height: 130%;
+            }
+        }
+
+        .social {
+            background-color: rgb(48, 48, 48);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -100px;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            button {
+                border: 1px solid $color-primary;
+                padding: 10px;
+                background-color: rgb(48, 48, 48);
+                color: white;
+                text-transform: uppercase;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin: 0 10px;
+                }
+
+                span {
+                    margin-right: 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $color-primary;
+                }
+            }
+
+        }
+    }
 </style>
