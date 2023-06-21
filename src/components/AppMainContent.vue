@@ -87,6 +87,9 @@ export default {
 </script>
 
 <template>
+    <div class="jumbotron">
+        <button>current series</button>
+    </div>
     <div class="background">
         <div class="cards-container">
             <AppComicsCards v-for="(card, index) in comics" :key="index" :myCard="card" />
@@ -98,6 +101,25 @@ export default {
 <style scoped lang="scss">
     @use '../styles/generals.scss' as *;
     @use '../styles/partials/variables' as *;
+
+    .jumbotron {
+        position: relative;
+        height: 500px;
+        background-image: url('../assets/img/jumbotron.jpg');
+
+        button {
+            background-color: $color-primary;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: absolute;
+            left: 10%;
+            top: calc(100% - 35px);
+        }
+    }
 
     .background {
         width: 100%;
